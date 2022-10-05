@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const velocidade = 200
+const velocidade = 125
 const gravidade = 20
-const pulo = -550
+const pulo = -300
 const ceu = Vector2(0, -1)
 
 var motion = Vector2();
@@ -23,7 +23,7 @@ func _physics_process(delta):
 		$Sprite.play("Idle")
 		
 	if is_on_floor():
-		if Input.is_action_pressed("ui_up"):			
+		if Input.is_action_pressed("x"):			
 			motion.y = pulo					
 	else:
 		print(motion.y)
