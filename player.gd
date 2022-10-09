@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const aceleracao = 5
-const velocidade = 125
+const velocidade = 175
 const gravidade = 20
 const pulo = -300
 const ceu = Vector2(0, -1)

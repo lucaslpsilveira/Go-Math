@@ -1,13 +1,11 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Run_6.png" type="Texture" id=2]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Jump_8.png" type="Texture" id=3]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Idle_4.png" type="Texture" id=4]
-[ext_resource path="res://Assets/World/Tiles/Tileset/TileSet_02.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Interface/PNG/bubble/table.png" type="Texture" id=6]
 [ext_resource path="res://Assets/World/Background/Background.png" type="Texture" id=7]
-[ext_resource path="res://Camera2D.gd" type="Script" id=8]
 [ext_resource path="res://Escada.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Climb_4.png" type="Texture" id=10]
 [ext_resource path="res://Assets/World/Tiles/Tileset/TileSet_23.png" type="Texture" id=11]
@@ -209,10 +207,10 @@ animations = [ {
 extents = Vector2( 11.5, 14.5 )
 
 [sub_resource type="RectangleShape2D" id=36]
-extents = Vector2( 10.5, 13.5 )
+extents = Vector2( 5.875, 7.125 )
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 7, 160 )
+extents = Vector2( 11.875, 308 )
 
 [sub_resource type="StreamTexture" id=26]
 flags = 4
@@ -221,16 +219,15 @@ load_path = "res://.import/TileSet_02.png-9e6c77b329b5e9d9bc3befe3c8ef33d5.stex"
 [node name="Fase_1" type="Node"]
 
 [node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 2.0
+margin_top = 81.0
+margin_right = 42.0
+margin_bottom = 121.0
 
 [node name="Background" type="TextureRect" parent="."]
-anchor_top = -0.034
-anchor_bottom = -0.034
-margin_left = 1.0
-margin_top = -55.6
-margin_right = 513.0
-margin_bottom = 233.4
+margin_top = -30.0
+margin_right = 803.0
+margin_bottom = 453.0
 texture = ExtResource( 7 )
 expand = true
 stretch_mode = 5
@@ -240,7 +237,8 @@ stretch_mode = 5
 [node name="Plataforma 1" type="Node" parent="Plataformas"]
 
 [node name="Chao1" type="StaticBody2D" parent="Plataformas/Plataforma 1"]
-position = Vector2( 17, 121 )
+position = Vector2( 32, 256 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -252,7 +250,8 @@ texture = ExtResource( 11 )
 shape = SubResource( 3 )
 
 [node name="Chao2" type="StaticBody2D" parent="Plataformas/Plataforma 1"]
-position = Vector2( 49, 121 )
+position = Vector2( 96, 256 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -264,7 +263,8 @@ texture = ExtResource( 11 )
 shape = SubResource( 3 )
 
 [node name="Chao3" type="StaticBody2D" parent="Plataformas/Plataforma 1"]
-position = Vector2( 81, 121 )
+position = Vector2( 160, 256 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -276,7 +276,8 @@ texture = ExtResource( 11 )
 shape = SubResource( 3 )
 
 [node name="Chao4" type="StaticBody2D" parent="Plataformas/Plataforma 1"]
-position = Vector2( 113, 121 )
+position = Vector2( 224, 256 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -289,7 +290,8 @@ position = Vector2( -8, 0 )
 shape = SubResource( 37 )
 
 [node name="Chao5" type="StaticBody2D" parent="Plataformas/Plataforma 1"]
-position = Vector2( 145, 121 )
+position = Vector2( 288, 256 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -302,68 +304,68 @@ position = Vector2( 7, -1.5 )
 shape = SubResource( 38 )
 
 [node name="Escada" parent="." instance=ExtResource( 9 )]
-position = Vector2( 129, 164 )
+position = Vector2( 255, 342 )
+scale = Vector2( 2, 2 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 34, 186 )
+position = Vector2( 40, 382 )
 collision/safe_margin = 0.015
 script = ExtResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Climb_Down"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( -1.5, 1.5 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Player"]
+scale = Vector2( 2, 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2( -1.5, 1.5 )
+position = Vector2( -1.25, 1.75 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 36 )
 
 [node name="Terra" type="Node" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="Terra"]
-position = Vector2( -4, 0 )
-anchor_mode = 0
-zoom = Vector2( 0.5, 0.5 )
-limit_left = 0
-smoothing_enabled = true
-script = ExtResource( 8 )
 
 [node name="Parede2" type="StaticBody2D" parent="Terra"]
 position = Vector2( -108, 516 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Parede2"]
-position = Vector2( 628, -374 )
+position = Vector2( 919.125, -212 )
 shape = SubResource( 27 )
 
 [node name="Parede" type="StaticBody2D" parent="Terra"]
-position = Vector2( -54, 258 )
+position = Vector2( -51, 499 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Parede"]
-position = Vector2( 47, -115 )
+position = Vector2( 39, -196 )
 shape = SubResource( 27 )
 
 [node name="Chao" type="Node" parent="Terra"]
 
-[node name="Chao" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 257, 217 )
+[node name="Chao1" type="StaticBody2D" parent="Terra/Chao"]
+position = Vector2( 32, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Terra/Chao/Chao"]
-texture = ExtResource( 5 )
+[node name="Sprite" type="Sprite" parent="Terra/Chao/Chao1"]
+texture = SubResource( 26 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao1"]
 shape = SubResource( 3 )
 
 [node name="Chao2" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 225, 217 )
+position = Vector2( 96, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -375,7 +377,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao3" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 193, 217 )
+position = Vector2( 160, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -387,7 +390,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao4" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 320, 217 )
+position = Vector2( 224, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -399,7 +403,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao5" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 352, 217 )
+position = Vector2( 288, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -411,7 +416,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao6" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 288, 217 )
+position = Vector2( 352, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -423,7 +429,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao7" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 34, 217 )
+position = Vector2( 416, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -435,7 +442,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao8" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 66, 217 )
+position = Vector2( 480, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -447,7 +455,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao9" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 2, 217 )
+position = Vector2( 544, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -459,7 +468,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao10" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 129, 217 )
+position = Vector2( 608, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -471,7 +481,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao11" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 161, 217 )
+position = Vector2( 672, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -483,7 +494,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao12" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 97, 217 )
+position = Vector2( 736, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -495,7 +507,8 @@ texture = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="Chao13" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 416, 217 )
+position = Vector2( 800, 447 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -506,58 +519,11 @@ texture = SubResource( 26 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao13"]
 shape = SubResource( 3 )
 
-[node name="Chao14" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 448, 217 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Terra/Chao/Chao14"]
-texture = SubResource( 26 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao14"]
-shape = SubResource( 3 )
-
-[node name="Chao15" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 384, 217 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Terra/Chao/Chao15"]
-texture = SubResource( 26 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao15"]
-shape = SubResource( 3 )
-
-[node name="Chao16" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 511, 217 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Terra/Chao/Chao16"]
-texture = SubResource( 26 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao16"]
-shape = SubResource( 3 )
-
-[node name="Chao18" type="StaticBody2D" parent="Terra/Chao"]
-position = Vector2( 479, 217 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Terra/Chao/Chao18"]
-texture = SubResource( 26 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Chao/Chao18"]
-shape = SubResource( 3 )
-
 [node name="HUD" type="TextureRect" parent="."]
-margin_top = 231.0
-margin_right = 513.0
-margin_bottom = 302.0
+margin_left = -12.0
+margin_top = 470.0
+margin_right = 819.0
+margin_bottom = 614.0
 texture = ExtResource( 6 )
 stretch_mode = 1
 
