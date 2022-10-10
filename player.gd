@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const aceleracao = 5
-const velocidade = 175
+const aceleracao = 3
+const velocidade = 110
 const gravidade = 20
 const pulo = -300
 const ceu = Vector2(0, -1)
@@ -15,7 +15,7 @@ func _physics_process(delta):
 	movimento()
 	if !subindo_escada:
 			motion.y += gravidade
-			pulo() 	
+			_pulo() 	
 	escalando()
 	#motion é igual a função para zerar a gravidade
 	motion = move_and_slide(motion,ceu)
@@ -32,7 +32,7 @@ func movimento():
 	else:
 		motion.x = 0
 		$Sprite.play("Idle")
-func pulo():		
+func _pulo():		
 	if is_on_floor():
 		if Input.is_action_pressed("x"):			
 			motion.y = pulo					
@@ -45,16 +45,17 @@ func pulo():
 func escalando():
 	if encostando_escada:
 		if Input.is_action_pressed("ui_up"):
-			subindo_escada = true			
-			motion.y =  max(motion.y - aceleracao, -velocidade)
 			$Sprite.play("Climb")
+			subindo_escada = true			
+			motion.y =  max(motion.y - aceleracao, -velocidade)			
 		elif Input.is_action_pressed("ui_down"):
+			$Sprite.play("Climb_Down")
 			subindo_escada = true
 			motion.y =  max(motion.y + aceleracao, velocidade)
-			$Sprite.play("Climb_Down")
-		else:
+		else:			
 			if subindo_escada:
 				motion.y = 0
+				$Sprite.play("Climb")
 				
 func _on_Area2D_area_exited(area):
 	area.get_name()
