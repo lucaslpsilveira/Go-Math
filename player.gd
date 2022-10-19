@@ -17,6 +17,7 @@ func _physics_process(delta):
 			motion.y += gravidade
 			_pulo() 	
 	escalando()
+	_getNumeros()
 	#motion é igual a função para zerar a gravidade
 	motion = move_and_slide(motion,ceu)
 
@@ -41,6 +42,11 @@ func _pulo():
 			$Sprite.play("Jump")
 		else:
 			$Sprite.play("Fall")
+
+func _getNumeros():
+	if Input.is_action_pressed("c"):
+		print('pressionou c no player')
+		
 	
 func escalando():
 	if encostando_escada:
@@ -64,6 +70,9 @@ func _on_Area2D_area_exited(area):
 		subindo_escada = false
 
 func _on_Area2D_area_entered(area):
-	area.get_name()
+	var name = area.get_name()
 	if area.is_in_group("escada"):
+		print('encostou na escada')
 		encostando_escada = true
+	if name == 'Numero':
+		print('encostou no numero')
