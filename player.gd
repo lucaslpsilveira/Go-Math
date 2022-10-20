@@ -8,7 +8,7 @@ const ceu = Vector2(0, -1)
 
 var encostando_escada := false
 var subindo_escada := false
-
+var arrayNumeros = []
 var motion = Vector2();
 
 func _physics_process(delta):
@@ -72,7 +72,4 @@ func _on_Area2D_area_exited(area):
 func _on_Area2D_area_entered(area):
 	var name = area.get_name()
 	if area.is_in_group("escada"):
-		print('encostou na escada')
 		encostando_escada = true
-	if name == 'Numero':
-		print('encostou no numero')
