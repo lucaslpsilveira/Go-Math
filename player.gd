@@ -15,7 +15,7 @@ func _physics_process(delta):
 	movimento()
 	if !subindo_escada:
 			motion.y += gravidade
-			_pulo() 	
+			_pulo()
 	escalando()
 	_getNumeros()
 	#motion é igual a função para zerar a gravidade
@@ -33,10 +33,14 @@ func movimento():
 	else:
 		motion.x = 0
 		$Sprite.play("Idle")
+
 func _pulo():		
-	if is_on_floor():
-		if Input.is_action_pressed("x"):			
-			motion.y = pulo					
+	if is_on_floor():			
+		if Input.is_action_pressed("x"):
+			if Input.is_action_pressed("ui_down"):
+				position.y += 1					
+			else:
+				motion.y = pulo					
 	else:
 		if(motion.y < 0):
 			$Sprite.play("Jump")
