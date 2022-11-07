@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/C.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Interface/PNG/bubble/5.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Interface/PNG/bubble/5.png" type="Texture" id=1]
+[ext_resource path="res://Assets/C.png" type="Texture" id=2]
 [ext_resource path="res://Numeros/Numero.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 70, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 70, 0, 70, 64 )
 
 [sub_resource type="SpriteFrames" id=4]
@@ -20,10 +20,10 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 12, 15 )
 
-[node name="Numero" type="Area2D"]
+[node name="Numero5" type="Area2D"]
 script = ExtResource( 3 )
 
 [node name="C" type="AnimatedSprite" parent="."]
@@ -31,15 +31,13 @@ position = Vector2( 0, -26 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 4 )
 animation = "click"
+frame = 1
 playing = true
 
-[node name="Numero" type="Sprite" parent="."]
-modulate = Color( 0.933333, 0.415686, 0.360784, 1 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
-[connection signal="area_entered" from="." to="." method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_Numero_area_exited"]
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.933333, 0.415686, 0.360784, 1 )
+scale = Vector2( 0.5, 0.508475 )
+texture = ExtResource( 1 )

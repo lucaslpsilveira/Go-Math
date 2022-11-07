@@ -5,7 +5,6 @@ var player_encostando = false
 
 func _ready():
 	remove_child(c)
-		
 	
 func _on_Numero_area_exited(area):
 		remove_child(c)		

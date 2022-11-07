@@ -1,7 +1,7 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Numero3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Numeros/Numero7.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fase_1.gd" type="Script" id=3]
 [ext_resource path="res://Numeros/Numero5.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/World/Tiles/TileSet.png" type="Texture" id=5]
@@ -9,6 +9,10 @@
 [ext_resource path="res://Assets/World/Background/Background.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Interface/PNG/pause/bg.png" type="Texture" id=8]
 [ext_resource path="res://Escada.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Numeros/Numero8.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Interface/PNG/level_select/bg.png" type="Texture" id=11]
+[ext_resource path="res://Pause.gd" type="Script" id=12]
+[ext_resource path="res://Numeros/Numero9.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 13, 152.5 )
@@ -862,10 +866,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 font_path = "res://Assets/Font/upheavtt.ttf"
 
 [sub_resource type="DynamicFont" id=71]
-size = 62
+size = 25
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 70 )
+
+[sub_resource type="DynamicFontData" id=72]
+font_path = "res://Assets/Font/upheavtt.ttf"
+
+[sub_resource type="DynamicFont" id=73]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 72 )
 
 [node name="Fase_1" type="Node"]
 script = ExtResource( 3 )
@@ -899,30 +912,32 @@ collision_mask = 0
 position = Vector2( 3, 2 )
 shape = SubResource( 27 )
 
-[node name="Numero3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 32, 111 )
-
-[node name="Numero5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 363, 110 )
-
-[node name="Plataformas" type="TileMap" parent="."]
-tile_set = SubResource( 39 )
-cell_size = Vector2( 32, 32 )
-collision_layer = 4
-collision_mask = 0
-format = 1
-tile_data = PoolIntArray( 262144, 22, 0, 262145, 22, 0, 262146, 22, 0, 262147, 22, 0, 262148, 23, 0, 262153, 21, 0, 262154, 22, 0, 262155, 22, 0, 262156, 22, 0 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 39 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 327687, 3, 0, 393222, 0, 0, 393223, 18, 0, 393224, 2, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 12, 0, 458759, 8, 0, 458760, 11, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
+tile_data = PoolIntArray( 262144, 22, 0, 262145, 22, 0, 262146, 22, 0, 262147, 22, 0, 262148, 23, 0, 262153, 21, 0, 262154, 22, 0, 262155, 22, 0, 262156, 22, 0, 327687, 3, 0, 393222, 0, 0, 393223, 18, 0, 393224, 2, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 12, 0, 458759, 8, 0, 458760, 11, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
 
 [node name="Escada" parent="." instance=ExtResource( 9 )]
 position = Vector2( 112, 187 )
+
+[node name="Numero8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 365, 209 )
+collision_layer = 2
+
+[node name="Numero5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 363, 112 )
+collision_layer = 2
+
+[node name="Numero9" parent="." instance=ExtResource( 13 )]
+position = Vector2( 151, 209 )
+collision_layer = 2
+
+[node name="Numero7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 55, 113 )
+collision_layer = 2
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 24, 207 )
@@ -950,11 +965,21 @@ position = Vector2( 45.44, 285 )
 scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 8 )
 
+[node name="Void2" type="Sprite" parent="HUD"]
+position = Vector2( 152.44, 285 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 8 )
+
+[node name="Void3" type="Sprite" parent="HUD"]
+position = Vector2( 265.44, 285 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 8 )
+
 [node name="5" type="Label" parent="HUD"]
-margin_left = 19.44
-margin_top = 253.0
-margin_right = 72.44
-margin_bottom = 310.0
+margin_left = 17.0
+margin_top = 259.0
+margin_right = 72.0
+margin_bottom = 309.0
 custom_fonts/font = SubResource( 71 )
 text = "5"
 align = 1
@@ -970,6 +995,16 @@ text = "+"
 align = 1
 valign = 1
 
+[node name="3" type="Label" parent="HUD"]
+margin_left = 124.0
+margin_top = 259.0
+margin_right = 179.0
+margin_bottom = 309.0
+custom_fonts/font = SubResource( 71 )
+text = "3"
+align = 1
+valign = 1
+
 [node name="=" type="Label" parent="HUD"]
 margin_left = 182.44
 margin_top = 253.0
@@ -980,31 +1015,111 @@ text = "="
 align = 1
 valign = 1
 
-[node name="Void2" type="Sprite" parent="HUD"]
-position = Vector2( 152.44, 285 )
-scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 8 )
-
-[node name="Numero" type="Label" parent="HUD"]
-margin_left = 127.44
-margin_top = 253.0
-margin_right = 180.44
-margin_bottom = 310.0
+[node name="Resultado" type="Label" parent="HUD"]
+margin_left = 237.0
+margin_top = 259.0
+margin_right = 292.0
+margin_bottom = 309.0
 custom_fonts/font = SubResource( 71 )
 align = 1
 valign = 1
 
-[node name="Void3" type="Sprite" parent="HUD"]
-position = Vector2( 265.44, 285 )
-scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 8 )
+[node name="menu" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 12 )
 
-[node name="resultado" type="Label" parent="HUD"]
-margin_left = 239.44
-margin_top = 250.0
-margin_right = 292.44
-margin_bottom = 313.0
+[node name="menuPause" type="Control" parent="menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="menu/menuPause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.313726 )
+
+[node name="TextureRect" type="TextureRect" parent="menu/menuPause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -92.0
+margin_right = 74.0
+margin_bottom = 74.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="menu/menuPause/TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.0
+margin_top = 1.0
+margin_right = 69.0
+margin_bottom = 153.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 10
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/menuPause/TextureRect/MarginContainer"]
+margin_left = 15.0
+margin_top = 10.0
+margin_right = 128.0
+margin_bottom = 137.0
+
+[node name="label" type="Label" parent="menu/menuPause/TextureRect/MarginContainer/VBoxContainer"]
+margin_right = 113.0
+margin_bottom = 23.0
 custom_fonts/font = SubResource( 71 )
-text = "8"
+text = "Pausado"
 align = 1
 valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="menu/menuPause/TextureRect/MarginContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 113.0
+margin_bottom = 31.0
+
+[node name="ProximaFase" type="Button" parent="menu/menuPause/TextureRect/MarginContainer/VBoxContainer"]
+margin_top = 35.0
+margin_right = 113.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 73 )
+text = "Proxima Fase"
+
+[node name="Continuar" type="Button" parent="menu/menuPause/TextureRect/MarginContainer/VBoxContainer"]
+margin_top = 59.0
+margin_right = 113.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 73 )
+text = "Continuar"
+
+[node name="Reiniciar" type="Button" parent="menu/menuPause/TextureRect/MarginContainer/VBoxContainer"]
+margin_top = 83.0
+margin_right = 113.0
+margin_bottom = 103.0
+custom_fonts/font = SubResource( 73 )
+text = "Reiniciar"
+
+[node name="Sair" type="Button" parent="menu/menuPause/TextureRect/MarginContainer/VBoxContainer"]
+margin_top = 107.0
+margin_right = 113.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 73 )
+text = "Menu"
+
+[connection signal="area_entered" from="Numero8" to="Numero8" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero8" to="Numero8" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero5" to="Numero5" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero5" to="Numero5" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero9" to="Numero9" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero9" to="Numero9" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero7" to="Numero7" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero7" to="Numero7" method="_on_Numero_area_exited"]
+[connection signal="pressed" from="menu/menuPause/TextureRect/MarginContainer/VBoxContainer/ProximaFase" to="menu" method="_on_ProximaFase_pressed"]
+[connection signal="pressed" from="menu/menuPause/TextureRect/MarginContainer/VBoxContainer/Continuar" to="menu" method="_on_Continuar_pressed"]
+[connection signal="pressed" from="menu/menuPause/TextureRect/MarginContainer/VBoxContainer/Reiniciar" to="menu" method="_on_Reiniciar_pressed"]
+[connection signal="pressed" from="menu/menuPause/TextureRect/MarginContainer/VBoxContainer/Sair" to="menu" method="_on_Sair_pressed"]
