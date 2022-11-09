@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3-0cd6a63dbadb80eb4222de4533559b17.mp3str"
+
+[deps]
+
+source_file="res://Assets/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3"
+dest_files=[ "res://.import/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3-0cd6a63dbadb80eb4222de4533559b17.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

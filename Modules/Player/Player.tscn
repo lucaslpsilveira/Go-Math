@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://Modules/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Climb_4.png" type="Texture" id=2]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Jump_8.png" type="Texture" id=3]
 [ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Run_6.png" type="Texture" id=4]

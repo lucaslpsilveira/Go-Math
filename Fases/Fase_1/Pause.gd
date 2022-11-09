@@ -50,9 +50,9 @@ func _on_Reiniciar_pressed():
 
 func _on_Sair_pressed():
 	_despausa()
-	get_tree().change_scene('res://Menu.tscn')
+	get_tree().change_scene("res://Modules/Menu/Menu.tscn")
 
 func _on_ProximaFase_pressed():
 	print('roda next fase')
 	_despausa()
-	get_tree().change_scene('res://Menu.tscn')
+	get_tree().change_scene('res://Modules/Menu/Menu.tscn')
