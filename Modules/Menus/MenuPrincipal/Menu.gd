@@ -10,6 +10,7 @@ extends Control
 func _ready():
 	get_tree().paused = false
 	$VBoxContainer/Start.grab_focus()
+	$Musica.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

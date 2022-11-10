@@ -1,5 +1,5 @@
 extends Control
-var next = 'res://Menu.tscn'
+var next = 'res://Modules/Menus/MenuPrincipal/Menu.tscn'
 onready var label = $menuPause/TextureRect/MarginContainer/VBoxContainer/label
 onready var btnProximaFase = $menuPause/TextureRect/MarginContainer/VBoxContainer/ProximaFase
 onready var btnContinuar = $menuPause/TextureRect/MarginContainer/VBoxContainer/Continuar
@@ -19,7 +19,8 @@ func _process(delta):
 		elif get_tree().paused && !Input.is_action_just_pressed("Enter"):
 			_despausa()
 			
-func _acertou():
+func _acertou(proximaFase):
+	next = proximaFase
 	label.text = 'acertou'
 	btnContinuar.visible = false	
 	btnProximaFase.visible = true
@@ -50,9 +51,8 @@ func _on_Reiniciar_pressed():
 
 func _on_Sair_pressed():
 	_despausa()
-	get_tree().change_scene("res://Modules/Menu/Menu.tscn")
+	get_tree().change_scene("res://Modules/Menus/MenuPrincipal/Menu.tscn")
 
 func _on_ProximaFase_pressed():
-	print('roda next fase')
 	_despausa()
-	get_tree().change_scene('res://Modules/Menu/Menu.tscn')
+	get_tree().change_scene(next)

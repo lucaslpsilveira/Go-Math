@@ -6,8 +6,11 @@ onready var numero7 = get_node("Numero7")
 onready var numero8 = get_node("Numero8")
 onready var numero9 = get_node("Numero9")
 onready var numero = get_node("HUD/Resultado")
+onready var textoTopo = get_node("HUD/topo/textoTopo")
+onready var proximaFase = "res://Modules/Menus/MenuPrincipal/Menu.tscn"
 
 func _ready():
+	textoTopo.text = "nivel 1"
 	get_tree().paused = false
 	$Musica.play()
 
@@ -34,9 +37,9 @@ func _physics_process(delta):
 		if(player.arrayNumeros[0] == 8):
 			$Acertou.play()
 			$Acertou.pause_mode = Node.PAUSE_MODE_PROCESS
-			$menu._acertou()			
+			$menuPausa/menu._acertou(proximaFase)			
 		else:
 			$Errou.play()
 			$Errou.pause_mode = Node.PAUSE_MODE_PROCESS
-			$menu._errou()
+			$menuPausa/menu._errou()
 			
