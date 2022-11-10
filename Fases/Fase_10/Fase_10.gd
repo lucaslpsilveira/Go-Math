@@ -35,7 +35,7 @@ func _physics_process(delta):
 		if(4 == player.arrayNumeros[0]):
 			$Acertou.play()
 			$Acertou.pause_mode = Node.PAUSE_MODE_PROCESS
-			$menuPausa/menu._acertou(proximaFase)			
+			get_tree().change_scene(proximaFase)			
 		else:
 			$Errou.play()
 			$Errou.pause_mode = Node.PAUSE_MODE_PROCESS
