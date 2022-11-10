@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Modules/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/Numeros/Numero7.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Assets/Interface/PNG/level_select/bg.png" type="Texture" id=11]
 [ext_resource path="res://Fases/Fase_1/Pause.gd" type="Script" id=12]
 [ext_resource path="res://Modules/Numeros/Numero9.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Assets/mixkit-fairy-cartoon-success-voice-344.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/mixkit-failure-arcade-alert-notification-240.wav" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 13, 152.5 )
@@ -1110,6 +1113,18 @@ margin_right = 113.0
 margin_bottom = 127.0
 custom_fonts/font = SubResource( 73 )
 text = "Menu"
+
+[node name="Acertou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -11.69
+
+[node name="Errou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -7.102
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -30.439
 
 [connection signal="area_entered" from="Numero8" to="Numero8" method="_on_Numero_area_entered"]
 [connection signal="area_exited" from="Numero8" to="Numero8" method="_on_Numero_area_exited"]

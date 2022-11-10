@@ -9,6 +9,7 @@ onready var numero = get_node("HUD/Resultado")
 
 func _ready():
 	get_tree().paused = false
+	$Musica.play()
 
 func _physics_process(delta):
 	if Input.is_action_pressed("c"):
@@ -31,6 +32,11 @@ func _physics_process(delta):
 			
 	if(player.arrayNumeros.size() > 0):
 		if(player.arrayNumeros[0] == 8):
-			$menu._acertou()
+			$Acertou.play()
+			$Acertou.pause_mode = Node.PAUSE_MODE_PROCESS
+			$menu._acertou()			
 		else:
+			$Errou.play()
+			$Errou.pause_mode = Node.PAUSE_MODE_PROCESS
 			$menu._errou()
+			
