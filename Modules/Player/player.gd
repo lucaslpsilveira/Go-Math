@@ -3,7 +3,7 @@ extends KinematicBody2D
 const aceleracao = 3
 const velocidade = 110
 const gravidade = 20
-const pulo = -300
+const pulo = -400
 const ceu = Vector2(0, -1)
 
 var encostando_escada := false
@@ -37,10 +37,10 @@ func movimento():
 func _pulo():		
 	if is_on_floor():			
 		if Input.is_action_pressed("x"):
-			$Pulo.play()			
 			if Input.is_action_pressed("ui_down"):
 				position.y += 1					
 			else:
+				$Pulo.play()	
 				motion.y = pulo					
 	else:
 		if(motion.y < 0):

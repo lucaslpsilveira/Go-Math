@@ -1,17 +1,17 @@
 [gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Modules/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Modules/Numeros/Numero7.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Fases/Fase_1/Fase_1.gd" type="Script" id=3]
+[ext_resource path="res://Modules/Numeros/Numero1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fases/Fase_6/Fase_6.gd" type="Script" id=3]
 [ext_resource path="res://Modules/Numeros/Numero5.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/World/Tiles/TileSet.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Interface/PNG/bubble/table.png" type="Texture" id=6]
 [ext_resource path="res://Assets/World/Background/Background.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Interface/PNG/pause/bg.png" type="Texture" id=8]
 [ext_resource path="res://Modules/Escada.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Modules/Numeros/Numero8.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Modules/Numeros/Numero0.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Modules/Menus/MenuPausa/MenuPausa.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Modules/Numeros/Numero9.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/Numeros/Numero2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3" type="AudioStream" id=14]
 [ext_resource path="res://Assets/mixkit-fairy-cartoon-success-voice-344.wav" type="AudioStream" id=15]
 [ext_resource path="res://Assets/mixkit-failure-arcade-alert-notification-240.wav" type="AudioStream" id=16]
@@ -883,7 +883,7 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 74 )
 
-[node name="Fase_1" type="Node"]
+[node name="Fase_6" type="Node"]
 script = ExtResource( 3 )
 
 [node name="Background" type="TextureRect" parent="."]
@@ -921,40 +921,30 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 262144, 22, 0, 262145, 22, 0, 262146, 22, 0, 262147, 22, 0, 262148, 23, 0, 262153, 21, 0, 262154, 22, 0, 262155, 22, 0, 262156, 22, 0, 327687, 3, 0, 393222, 0, 0, 393223, 18, 0, 393224, 2, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 12, 0, 458759, 8, 0, 458760, 11, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
+tile_data = PoolIntArray( 262144, 22, 0, 262145, 22, 0, 262146, 22, 0, 262147, 22, 0, 262148, 23, 0, 262154, 21, 0, 262155, 22, 0, 262156, 22, 0, 327688, 0, 0, 327689, 2, 0, 393223, 0, 0, 393224, 12, 0, 393225, 9, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
 
 [node name="Escada" parent="." instance=ExtResource( 9 )]
-position = Vector2( 112, 187 )
+position = Vector2( 79, 187 )
 
-[node name="Numero8" parent="." instance=ExtResource( 10 )]
-position = Vector2( 365, 209 )
-collision_layer = 2
+[node name="Escada2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 398, 187 )
+
+[node name="Numero0" parent="." instance=ExtResource( 10 )]
+position = Vector2( 335, 112 )
+
+[node name="Numero1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 348, 207 )
+
+[node name="Numero2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 148, 207 )
 
 [node name="Numero5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 363, 112 )
-collision_layer = 2
-
-[node name="Numero9" parent="." instance=ExtResource( 13 )]
-position = Vector2( 151, 209 )
-collision_layer = 2
-
-[node name="Numero7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 55, 113 )
-collision_layer = 2
+position = Vector2( 25, 110 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 24, 207 )
 
 [node name="HUD" type="Node2D" parent="."]
-
-[node name="Mensagem" type="Label" parent="HUD"]
-margin_left = 76.0
-margin_top = 91.0
-margin_right = 332.0
-margin_bottom = 148.0
-custom_fonts/font = SubResource( 71 )
-align = 1
-valign = 1
 
 [node name="Background" type="TextureRect" parent="HUD"]
 margin_top = 249.0
@@ -964,54 +954,59 @@ texture = ExtResource( 6 )
 stretch_mode = 1
 
 [node name="Void" type="Sprite" parent="HUD"]
-position = Vector2( 99.44, 286 )
+position = Vector2( 51.44, 286 )
 scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 8 )
 
 [node name="Void2" type="Sprite" parent="HUD"]
-position = Vector2( 206.44, 286 )
+position = Vector2( 158.44, 286 )
 scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 8 )
 
 [node name="Void3" type="Sprite" parent="HUD"]
-position = Vector2( 319.44, 286 )
+position = Vector2( 271.44, 286 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 8 )
+
+[node name="Void4" type="Sprite" parent="HUD"]
+position = Vector2( 338.44, 286 )
 scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 8 )
 
 [node name="5" type="Label" parent="HUD"]
-margin_left = 71.0
+margin_left = 23.0
 margin_top = 260.0
-margin_right = 126.0
+margin_right = 78.0
 margin_bottom = 310.0
 custom_fonts/font = SubResource( 71 )
 text = "5"
 align = 1
 valign = 1
 
-[node name="+" type="Label" parent="HUD"]
-margin_left = 127.44
+[node name="x" type="Label" parent="HUD"]
+margin_left = 79.44
 margin_top = 253.0
-margin_right = 180.44
+margin_right = 132.44
 margin_bottom = 317.0
 custom_fonts/font = SubResource( 71 )
-text = "+"
+text = "x"
 align = 1
 valign = 1
 
-[node name="3" type="Label" parent="HUD"]
-margin_left = 178.0
+[node name="2" type="Label" parent="HUD"]
+margin_left = 130.0
 margin_top = 260.0
-margin_right = 233.0
+margin_right = 185.0
 margin_bottom = 310.0
 custom_fonts/font = SubResource( 71 )
-text = "3"
+text = "2"
 align = 1
 valign = 1
 
 [node name="=" type="Label" parent="HUD"]
-margin_left = 236.44
+margin_left = 188.44
 margin_top = 254.0
-margin_right = 289.44
+margin_right = 241.44
 margin_bottom = 317.0
 custom_fonts/font = SubResource( 71 )
 text = "="
@@ -1019,9 +1014,18 @@ align = 1
 valign = 1
 
 [node name="Resultado" type="Label" parent="HUD"]
-margin_left = 291.0
+margin_left = 242.0
 margin_top = 260.0
-margin_right = 346.0
+margin_right = 297.0
+margin_bottom = 310.0
+custom_fonts/font = SubResource( 71 )
+align = 1
+valign = 1
+
+[node name="Resultado2" type="Label" parent="HUD"]
+margin_left = 310.0
+margin_top = 260.0
+margin_right = 365.0
 margin_bottom = 310.0
 custom_fonts/font = SubResource( 71 )
 align = 1
@@ -1038,7 +1042,7 @@ margin_top = -96.0
 margin_right = 748.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 75 )
-text = "Nivel 1"
+text = "Nível 1"
 align = 1
 valign = 1
 
@@ -1056,11 +1060,11 @@ volume_db = -7.102
 stream = ExtResource( 14 )
 volume_db = -30.439
 
-[connection signal="area_entered" from="Numero8" to="Numero8" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero8" to="Numero8" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero0" to="Numero0" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero0" to="Numero0" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero1" to="Numero1" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero1" to="Numero1" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero2" to="Numero2" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero2" to="Numero2" method="_on_Numero_area_exited"]
 [connection signal="area_entered" from="Numero5" to="Numero5" method="_on_Numero_area_entered"]
 [connection signal="area_exited" from="Numero5" to="Numero5" method="_on_Numero_area_exited"]
-[connection signal="area_entered" from="Numero9" to="Numero9" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero9" to="Numero9" method="_on_Numero_area_exited"]
-[connection signal="area_entered" from="Numero7" to="Numero7" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero7" to="Numero7" method="_on_Numero_area_exited"]

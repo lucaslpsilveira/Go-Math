@@ -1,21 +1,21 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=61 format=2]
 
-[ext_resource path="res://Modules/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Modules/Numeros/Numero7.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Fases/Fase_1/Fase_1.gd" type="Script" id=3]
-[ext_resource path="res://Modules/Numeros/Numero5.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/World/Tiles/TileSet.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Interface/PNG/bubble/table.png" type="Texture" id=6]
-[ext_resource path="res://Assets/World/Background/Background.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Interface/PNG/pause/bg.png" type="Texture" id=8]
-[ext_resource path="res://Modules/Escada.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Modules/Numeros/Numero8.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Modules/Menus/MenuPausa/MenuPausa.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Modules/Numeros/Numero9.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3" type="AudioStream" id=14]
-[ext_resource path="res://Assets/mixkit-fairy-cartoon-success-voice-344.wav" type="AudioStream" id=15]
-[ext_resource path="res://Assets/mixkit-failure-arcade-alert-notification-240.wav" type="AudioStream" id=16]
-[ext_resource path="res://Assets/Interface/PNG/bubble/up.png" type="Texture" id=17]
+[ext_resource path="res://Fases/Fase_10/Fase_10.gd" type="Script" id=1]
+[ext_resource path="res://Assets/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Interface/PNG/pause/bg.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Interface/PNG/bubble/table.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Interface/PNG/bubble/up.png" type="Texture" id=5]
+[ext_resource path="res://Assets/World/Background/Background.png" type="Texture" id=6]
+[ext_resource path="res://Assets/mixkit-fairy-cartoon-success-voice-344.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/mixkit-failure-arcade-alert-notification-240.wav" type="AudioStream" id=8]
+[ext_resource path="res://Modules/Menus/MenuPausa/MenuPausa.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/World/Tiles/TileSet.png" type="Texture" id=10]
+[ext_resource path="res://Modules/Numeros/Numero1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Modules/Numeros/Numero4.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Modules/Numeros/Numero2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/Player/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/Numeros/Numero3.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/Escada.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 13, 152.5 )
@@ -42,6 +42,12 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=47]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=82]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=83]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=48]
@@ -77,7 +83,31 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=69]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
+[sub_resource type="ConvexPolygonShape2D" id=81]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=77]
+points = PoolVector2Array( 0, 32, 32, 0, 32, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=59]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=78]
+points = PoolVector2Array( 0, 0, 0, 0, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=79]
+points = PoolVector2Array( 32, 32, 0, 0, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=84]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=85]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=86]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=87]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=60]
@@ -87,6 +117,12 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=62]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=88]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=89]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
@@ -100,7 +136,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=39]
 0/name = "TileSet.png 0"
-0/texture = ExtResource( 5 )
+0/texture = ExtResource( 10 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -139,7 +175,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 1/name = "TileSet.png 1"
-1/texture = ExtResource( 5 )
+1/texture = ExtResource( 10 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 32, 32 )
@@ -166,7 +202,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 2/name = "TileSet.png 2"
-2/texture = ExtResource( 5 )
+2/texture = ExtResource( 10 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 0, 32, 32 )
@@ -187,7 +223,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 2/z_index = 0
 3/name = "TileSet.png 3"
-3/texture = ExtResource( 5 )
+3/texture = ExtResource( 10 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 96, 0, 32, 32 )
@@ -208,7 +244,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 3/z_index = 0
 4/name = "TileSet.png 4"
-4/texture = ExtResource( 5 )
+4/texture = ExtResource( 10 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 128, 0, 32, 32 )
@@ -229,7 +265,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 4/z_index = 0
 5/name = "TileSet.png 5"
-5/texture = ExtResource( 5 )
+5/texture = ExtResource( 10 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 160, 0, 32, 32 )
@@ -250,7 +286,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 5/z_index = 0
 6/name = "TileSet.png 6"
-6/texture = ExtResource( 5 )
+6/texture = ExtResource( 10 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 192, 0, 32, 32 )
@@ -268,10 +304,22 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 "one_way_margin": 1.0,
 "shape": SubResource( 62 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 88 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 89 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
 7/name = "TileSet.png 7"
-7/texture = ExtResource( 5 )
+7/texture = ExtResource( 10 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 32, 32, 32 )
@@ -292,7 +340,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 7/z_index = 0
 8/name = "TileSet.png 8"
-8/texture = ExtResource( 5 )
+8/texture = ExtResource( 10 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 32, 32, 32, 32 )
@@ -313,7 +361,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 8/z_index = 0
 9/name = "TileSet.png 9"
-9/texture = ExtResource( 5 )
+9/texture = ExtResource( 10 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 64, 32, 32, 32 )
@@ -334,7 +382,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 9/z_index = 0
 10/name = "TileSet.png 10"
-10/texture = ExtResource( 5 )
+10/texture = ExtResource( 10 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 96, 32, 32, 32 )
@@ -361,7 +409,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 10/z_index = 0
 11/name = "TileSet.png 11"
-11/texture = ExtResource( 5 )
+11/texture = ExtResource( 10 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 128, 32, 32, 32 )
@@ -370,12 +418,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, 0 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 82 )
 11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 82 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 11/z_index = 0
 12/name = "TileSet.png 12"
-12/texture = ExtResource( 5 )
+12/texture = ExtResource( 10 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 160, 32, 32, 32 )
@@ -384,12 +439,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 12/navigation_offset = Vector2( 0, 0 )
 12/shape_offset = Vector2( 0, 0 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 83 )
 12/shape_one_way = false
-12/shape_one_way_margin = 0.0
-12/shapes = [  ]
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 83 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 12/z_index = 0
 13/name = "TileSet.png 13"
-13/texture = ExtResource( 5 )
+13/texture = ExtResource( 10 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 192, 32, 32, 32 )
@@ -403,7 +465,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 13/shapes = [  ]
 13/z_index = 0
 14/name = "TileSet.png 14"
-14/texture = ExtResource( 5 )
+14/texture = ExtResource( 10 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 64, 32, 32 )
@@ -424,7 +486,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 14/z_index = 0
 15/name = "TileSet.png 15"
-15/texture = ExtResource( 5 )
+15/texture = ExtResource( 10 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 32, 64, 32, 32 )
@@ -445,7 +507,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 15/z_index = 0
 16/name = "TileSet.png 16"
-16/texture = ExtResource( 5 )
+16/texture = ExtResource( 10 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 64, 64, 32, 32 )
@@ -466,7 +528,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 16/z_index = 0
 17/name = "TileSet.png 17"
-17/texture = ExtResource( 5 )
+17/texture = ExtResource( 10 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 96, 64, 32, 32 )
@@ -487,7 +549,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 17/z_index = 0
 18/name = "TileSet.png 18"
-18/texture = ExtResource( 5 )
+18/texture = ExtResource( 10 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 128, 64, 32, 32 )
@@ -508,7 +570,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 18/z_index = 0
 19/name = "TileSet.png 19"
-19/texture = ExtResource( 5 )
+19/texture = ExtResource( 10 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 160, 64, 32, 32 )
@@ -529,7 +591,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 19/z_index = 0
 20/name = "TileSet.png 20"
-20/texture = ExtResource( 5 )
+20/texture = ExtResource( 10 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 192, 64, 32, 32 )
@@ -543,7 +605,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 20/shapes = [  ]
 20/z_index = 0
 21/name = "TileSet.png 21"
-21/texture = ExtResource( 5 )
+21/texture = ExtResource( 10 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 96, 32, 32 )
@@ -564,7 +626,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 21/z_index = 0
 22/name = "TileSet.png 22"
-22/texture = ExtResource( 5 )
+22/texture = ExtResource( 10 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 32, 96, 32, 32 )
@@ -585,7 +647,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 22/z_index = 0
 23/name = "TileSet.png 23"
-23/texture = ExtResource( 5 )
+23/texture = ExtResource( 10 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 64, 96, 32, 32 )
@@ -606,7 +668,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 23/z_index = 0
 24/name = "TileSet.png 24"
-24/texture = ExtResource( 5 )
+24/texture = ExtResource( 10 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 96, 96, 32, 32 )
@@ -627,7 +689,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 24/z_index = 0
 25/name = "TileSet.png 25"
-25/texture = ExtResource( 5 )
+25/texture = ExtResource( 10 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 128, 96, 32, 32 )
@@ -641,7 +703,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 25/shapes = [  ]
 25/z_index = 0
 26/name = "TileSet.png 26"
-26/texture = ExtResource( 5 )
+26/texture = ExtResource( 10 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 160, 96, 32, 32 )
@@ -655,7 +717,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 26/shapes = [  ]
 26/z_index = 0
 27/name = "TileSet.png 27"
-27/texture = ExtResource( 5 )
+27/texture = ExtResource( 10 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 192, 96, 32, 32 )
@@ -669,7 +731,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 27/shapes = [  ]
 27/z_index = 0
 28/name = "TileSet.png 28"
-28/texture = ExtResource( 5 )
+28/texture = ExtResource( 10 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 128, 32, 32 )
@@ -678,12 +740,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 28/navigation_offset = Vector2( 0, 0 )
 28/shape_offset = Vector2( 0, 0 )
 28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape = SubResource( 81 )
 28/shape_one_way = false
-28/shape_one_way_margin = 0.0
-28/shapes = [  ]
+28/shape_one_way_margin = 1.0
+28/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 81 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 28/z_index = 0
 29/name = "TileSet.png 29"
-29/texture = ExtResource( 5 )
+29/texture = ExtResource( 10 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 32, 128, 32, 32 )
@@ -692,12 +761,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 29/navigation_offset = Vector2( 0, 0 )
 29/shape_offset = Vector2( 0, 0 )
 29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape = SubResource( 77 )
 29/shape_one_way = false
-29/shape_one_way_margin = 0.0
-29/shapes = [  ]
+29/shape_one_way_margin = 1.0
+29/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 77 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 29/z_index = 0
 30/name = "TileSet.png 30"
-30/texture = ExtResource( 5 )
+30/texture = ExtResource( 10 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 64, 128, 32, 32 )
@@ -706,12 +782,31 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 30/navigation_offset = Vector2( 0, 0 )
 30/shape_offset = Vector2( 0, 0 )
 30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape = SubResource( 78 )
 30/shape_one_way = false
-30/shape_one_way_margin = 0.0
-30/shapes = [  ]
+30/shape_one_way_margin = 1.0
+30/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 78 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 79 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 84 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 30/z_index = 0
 31/name = "TileSet.png 31"
-31/texture = ExtResource( 5 )
+31/texture = ExtResource( 10 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 96, 128, 32, 32 )
@@ -720,12 +815,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 31/navigation_offset = Vector2( 0, 0 )
 31/shape_offset = Vector2( 0, 0 )
 31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape = SubResource( 85 )
 31/shape_one_way = false
-31/shape_one_way_margin = 0.0
-31/shapes = [  ]
+31/shape_one_way_margin = 1.0
+31/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 85 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 31/z_index = 0
 32/name = "TileSet.png 32"
-32/texture = ExtResource( 5 )
+32/texture = ExtResource( 10 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 128, 128, 32, 32 )
@@ -734,12 +836,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 32/navigation_offset = Vector2( 0, 0 )
 32/shape_offset = Vector2( 0, 0 )
 32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape = SubResource( 86 )
 32/shape_one_way = false
-32/shape_one_way_margin = 0.0
-32/shapes = [  ]
+32/shape_one_way_margin = 1.0
+32/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 86 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 32/z_index = 0
 33/name = "TileSet.png 33"
-33/texture = ExtResource( 5 )
+33/texture = ExtResource( 10 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 160, 128, 32, 32 )
@@ -748,12 +857,19 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 33/navigation_offset = Vector2( 0, 0 )
 33/shape_offset = Vector2( 0, 0 )
 33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape = SubResource( 87 )
 33/shape_one_way = false
-33/shape_one_way_margin = 0.0
-33/shapes = [  ]
+33/shape_one_way_margin = 1.0
+33/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 87 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 33/z_index = 0
 34/name = "TileSet.png 34"
-34/texture = ExtResource( 5 )
+34/texture = ExtResource( 10 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 192, 128, 32, 32 )
@@ -767,7 +883,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 34/shapes = [  ]
 34/z_index = 0
 35/name = "TileSet.png 35"
-35/texture = ExtResource( 5 )
+35/texture = ExtResource( 10 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 160, 32, 32 )
@@ -781,7 +897,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 35/shapes = [  ]
 35/z_index = 0
 36/name = "TileSet.png 36"
-36/texture = ExtResource( 5 )
+36/texture = ExtResource( 10 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 32, 160, 32, 32 )
@@ -795,7 +911,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 36/shapes = [  ]
 36/z_index = 0
 37/name = "TileSet.png 37"
-37/texture = ExtResource( 5 )
+37/texture = ExtResource( 10 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 64, 160, 32, 32 )
@@ -809,7 +925,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 37/shapes = [  ]
 37/z_index = 0
 38/name = "TileSet.png 38"
-38/texture = ExtResource( 5 )
+38/texture = ExtResource( 10 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 96, 160, 32, 32 )
@@ -823,7 +939,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 38/shapes = [  ]
 38/z_index = 0
 39/name = "TileSet.png 39"
-39/texture = ExtResource( 5 )
+39/texture = ExtResource( 10 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 128, 160, 32, 32 )
@@ -837,7 +953,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 39/shapes = [  ]
 39/z_index = 0
 40/name = "TileSet.png 40"
-40/texture = ExtResource( 5 )
+40/texture = ExtResource( 10 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 160, 160, 32, 32 )
@@ -851,7 +967,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 40/shapes = [  ]
 40/z_index = 0
 41/name = "TileSet.png 41"
-41/texture = ExtResource( 5 )
+41/texture = ExtResource( 10 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 192, 160, 32, 32 )
@@ -864,12 +980,35 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 41/shape_one_way_margin = 0.0
 41/shapes = [  ]
 41/z_index = 0
+42/name = "TileSet.png 42"
+42/texture = ExtResource( 10 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 32, 128, 32, 32 )
+42/tile_mode = 1
+42/autotile/bitmask_mode = 0
+42/autotile/bitmask_flags = [  ]
+42/autotile/icon_coordinate = Vector2( 0, 0 )
+42/autotile/tile_size = Vector2( 32, 32 )
+42/autotile/spacing = 0
+42/autotile/occluder_map = [  ]
+42/autotile/navpoly_map = [  ]
+42/autotile/priority_map = [  ]
+42/autotile/z_index_map = [  ]
+42/occluder_offset = Vector2( 0, 0 )
+42/navigation_offset = Vector2( 0, 0 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
 
 [sub_resource type="DynamicFontData" id=76]
 font_path = "res://Assets/Font/upheavtt.ttf"
 
 [sub_resource type="DynamicFont" id=71]
-size = 50
+size = 40
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 76 )
@@ -883,15 +1022,15 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 74 )
 
-[node name="Fase_1" type="Node"]
-script = ExtResource( 3 )
+[node name="Fase_10" type="Node"]
+script = ExtResource( 1 )
 
 [node name="Background" type="TextureRect" parent="."]
 margin_left = -1.0
 margin_top = -6.0
 margin_right = 416.0
 margin_bottom = 248.0
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 5
 
@@ -921,108 +1060,128 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 262144, 22, 0, 262145, 22, 0, 262146, 22, 0, 262147, 22, 0, 262148, 23, 0, 262153, 21, 0, 262154, 22, 0, 262155, 22, 0, 262156, 22, 0, 327687, 3, 0, 393222, 0, 0, 393223, 18, 0, 393224, 2, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 12, 0, 458759, 8, 0, 458760, 11, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
+tile_data = PoolIntArray( 262144, 1, 0, 262145, 23, 0, 262152, 3, 0, 262154, 21, 0, 262155, 22, 0, 262156, 22, 0, 327680, 9, 0, 327686, 24, 0, 327688, 10, 0, 393216, 9, 0, 393220, 3, 0, 393224, 10, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 18, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 18, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0, 589827, 8, 0, 589828, 8, 0, 589829, 8, 0, 589830, 8, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
 
-[node name="Escada" parent="." instance=ExtResource( 9 )]
-position = Vector2( 112, 187 )
+[node name="Escada" parent="." instance=ExtResource( 16 )]
+position = Vector2( 375, 187 )
 
-[node name="Numero8" parent="." instance=ExtResource( 10 )]
-position = Vector2( 365, 209 )
-collision_layer = 2
+[node name="Escada2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 49, 187 )
 
-[node name="Numero5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 363, 112 )
-collision_layer = 2
+[node name="Numero1" parent="." instance=ExtResource( 11 )]
+position = Vector2( 308, 208 )
 
-[node name="Numero9" parent="." instance=ExtResource( 13 )]
-position = Vector2( 151, 209 )
-collision_layer = 2
+[node name="Numero2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 88, 209 )
 
-[node name="Numero7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 55, 113 )
-collision_layer = 2
+[node name="Numero3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 15, 112 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 24, 207 )
+[node name="Numero4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 403, 112 )
+
+[node name="Player" parent="." instance=ExtResource( 14 )]
+position = Vector2( 200, 207 )
 
 [node name="HUD" type="Node2D" parent="."]
-
-[node name="Mensagem" type="Label" parent="HUD"]
-margin_left = 76.0
-margin_top = 91.0
-margin_right = 332.0
-margin_bottom = 148.0
-custom_fonts/font = SubResource( 71 )
-align = 1
-valign = 1
 
 [node name="Background" type="TextureRect" parent="HUD"]
 margin_top = 249.0
 margin_right = 416.0
 margin_bottom = 320.0
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 stretch_mode = 1
 
 [node name="Void" type="Sprite" parent="HUD"]
-position = Vector2( 99.44, 286 )
-scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 8 )
+position = Vector2( 84.5, 284.715 )
+scale = Vector2( 0.0432489, 0.0470261 )
+texture = ExtResource( 3 )
 
 [node name="Void2" type="Sprite" parent="HUD"]
-position = Vector2( 206.44, 286 )
-scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 8 )
+position = Vector2( 130.5, 284.715 )
+scale = Vector2( 0.0432489, 0.0470261 )
+texture = ExtResource( 3 )
 
 [node name="Void3" type="Sprite" parent="HUD"]
-position = Vector2( 319.44, 286 )
-scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 8 )
+position = Vector2( 205.5, 284.715 )
+scale = Vector2( 0.0432489, 0.0470261 )
+texture = ExtResource( 3 )
 
-[node name="5" type="Label" parent="HUD"]
-margin_left = 71.0
-margin_top = 260.0
-margin_right = 126.0
-margin_bottom = 310.0
+[node name="Void4" type="Sprite" parent="HUD"]
+position = Vector2( 251.5, 284.715 )
+scale = Vector2( 0.0432489, 0.0470261 )
+texture = ExtResource( 3 )
+
+[node name="Void5" type="Sprite" parent="HUD"]
+position = Vector2( 331.5, 284.715 )
+scale = Vector2( 0.0432489, 0.0470261 )
+texture = ExtResource( 3 )
+
+[node name="8" type="Label" parent="HUD"]
+margin_left = 65.0
+margin_top = 263.0
+margin_right = 105.0
+margin_bottom = 303.0
 custom_fonts/font = SubResource( 71 )
-text = "5"
+text = "8"
 align = 1
 valign = 1
 
-[node name="+" type="Label" parent="HUD"]
-margin_left = 127.44
-margin_top = 253.0
-margin_right = 180.44
-margin_bottom = 317.0
+[node name="4" type="Label" parent="HUD"]
+margin_left = 110.0
+margin_top = 263.0
+margin_right = 150.0
+margin_bottom = 303.0
 custom_fonts/font = SubResource( 71 )
-text = "+"
+text = "4"
 align = 1
 valign = 1
 
-[node name="3" type="Label" parent="HUD"]
-margin_left = 178.0
-margin_top = 260.0
-margin_right = 233.0
-margin_bottom = 310.0
+[node name="div" type="Label" parent="HUD"]
+margin_left = 148.44
+margin_top = 264.0
+margin_right = 188.44
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 71 )
-text = "3"
+text = "÷"
+align = 1
+valign = 1
+
+[node name="2" type="Label" parent="HUD"]
+margin_left = 185.0
+margin_top = 264.0
+margin_right = 225.0
+margin_bottom = 304.0
+custom_fonts/font = SubResource( 71 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="1" type="Label" parent="HUD"]
+margin_left = 231.0
+margin_top = 264.0
+margin_right = 271.0
+margin_bottom = 304.0
+custom_fonts/font = SubResource( 71 )
+text = "1"
 align = 1
 valign = 1
 
 [node name="=" type="Label" parent="HUD"]
-margin_left = 236.44
-margin_top = 254.0
-margin_right = 289.44
-margin_bottom = 317.0
+margin_left = 271.44
+margin_top = 264.0
+margin_right = 311.44
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 71 )
 text = "="
 align = 1
 valign = 1
 
 [node name="Resultado" type="Label" parent="HUD"]
-margin_left = 291.0
-margin_top = 260.0
-margin_right = 346.0
-margin_bottom = 310.0
+margin_left = 311.0
+margin_top = 264.0
+margin_right = 351.0
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 71 )
 align = 1
 valign = 1
@@ -1030,7 +1189,7 @@ valign = 1
 [node name="topo" type="Sprite" parent="HUD"]
 position = Vector2( 211, 16 )
 scale = Vector2( 0.108236, 0.166457 )
-texture = ExtResource( 17 )
+texture = ExtResource( 5 )
 
 [node name="textoTopo" type="Label" parent="HUD/topo"]
 margin_left = -748.0
@@ -1042,25 +1201,25 @@ text = "Nivel 1"
 align = 1
 valign = 1
 
-[node name="menuPausa" parent="." instance=ExtResource( 11 )]
+[node name="menuPausa" parent="." instance=ExtResource( 9 )]
 
 [node name="Acertou" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 7 )
 volume_db = -11.69
 
 [node name="Errou" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 16 )
+stream = ExtResource( 8 )
 volume_db = -7.102
 
 [node name="Musica" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource( 2 )
 volume_db = -30.439
 
-[connection signal="area_entered" from="Numero8" to="Numero8" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero8" to="Numero8" method="_on_Numero_area_exited"]
-[connection signal="area_entered" from="Numero5" to="Numero5" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero5" to="Numero5" method="_on_Numero_area_exited"]
-[connection signal="area_entered" from="Numero9" to="Numero9" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero9" to="Numero9" method="_on_Numero_area_exited"]
-[connection signal="area_entered" from="Numero7" to="Numero7" method="_on_Numero_area_entered"]
-[connection signal="area_exited" from="Numero7" to="Numero7" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero1" to="Numero1" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero1" to="Numero1" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero2" to="Numero2" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero2" to="Numero2" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero3" to="Numero3" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero3" to="Numero3" method="_on_Numero_area_exited"]
+[connection signal="area_entered" from="Numero4" to="Numero4" method="_on_Numero_area_entered"]
+[connection signal="area_exited" from="Numero4" to="Numero4" method="_on_Numero_area_exited"]

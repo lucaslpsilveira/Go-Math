@@ -7,10 +7,10 @@ onready var numero8 = get_node("Numero8")
 onready var numero9 = get_node("Numero9")
 onready var numero = get_node("HUD/Resultado")
 onready var textoTopo = get_node("HUD/topo/textoTopo")
-onready var proximaFase = "res://Modules/Menus/MenuPrincipal/Menu.tscn"
+onready var proximaFase = "res://Fases/Fase_2/Fase_2.tscn"
 
 func _ready():
-	textoTopo.text = "nivel 1"
+	textoTopo.text = "nível 1"
 	get_tree().paused = false
 	$Musica.play()
 
@@ -42,4 +42,5 @@ func _physics_process(delta):
 			$Errou.play()
 			$Errou.pause_mode = Node.PAUSE_MODE_PROCESS
 			$menuPausa/menu._errou()
+			
 			
