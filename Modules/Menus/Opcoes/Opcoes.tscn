@@ -1,0 +1,362 @@
+[gd_scene load_steps=46 format=2]
+
+[ext_resource path="res://Assets/World/Background/Layers/7.png" type="Texture" id=1]
+[ext_resource path="res://Assets/World/Background/Layers/6.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/Background/Layers/8.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Interface/PNG/level_select/bg.png" type="Texture" id=4]
+[ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Jump_8.png" type="Texture" id=5]
+[ext_resource path="res://Assets/key.png" type="Texture" id=6]
+[ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Idle_4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/2 Owlet_Monster/Owlet_Monster_Run_6.png" type="Texture" id=8]
+[ext_resource path="res://Assets/arrowKeys.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Interface/PNG/bubble/0.png" type="Texture" id=10]
+[ext_resource path="res://Assets/C.png" type="Texture" id=11]
+[ext_resource path="res://Modules/Menus/Opcoes/Opcoes.gd" type="Script" id=12]
+[ext_resource path="res://Assets/tunetank.com_5683_beauty-of-nature_by_ahoami.mp3" type="AudioStream" id=13]
+
+[sub_resource type="DynamicFontData" id=70]
+font_path = "res://Assets/Font/upheavtt.ttf"
+
+[sub_resource type="DynamicFont" id=73]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 70 )
+
+[sub_resource type="DynamicFontData" id=72]
+font_path = "res://Assets/Font/upheavtt.ttf"
+
+[sub_resource type="DynamicFont" id=74]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 72 )
+
+[sub_resource type="DynamicFontData" id=91]
+font_path = "res://Assets/Font/upheavtt.ttf"
+
+[sub_resource type="DynamicFont" id=92]
+size = 17
+font_data = SubResource( 91 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 8 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 8 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 8 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=81]
+animations = [ {
+"frames": [ SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 5 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 5 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 5 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 5 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=90]
+animations = [ {
+"frames": [ SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=93]
+font_path = "res://Assets/Font/upheavtt.ttf"
+
+[sub_resource type="DynamicFont" id=94]
+size = 24
+font_data = SubResource( 93 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 7 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=99]
+animations = [ {
+"frames": [ SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 70, 64 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 11 )
+region = Rect2( 70, 0, 70, 64 )
+
+[sub_resource type="SpriteFrames" id=102]
+animations = [ {
+"frames": [ SubResource( 100 ), SubResource( 101 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 91, 160 )
+script = ExtResource( 12 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 209, 161.5 )
+scale = Vector2( 0.725694, 0.990741 )
+texture = ExtResource( 3 )
+
+[node name="Clouds" type="Sprite" parent="."]
+position = Vector2( 210, 177 )
+scale = Vector2( 0.725694, 0.990741 )
+texture = ExtResource( 1 )
+
+[node name="sky" type="Sprite" parent="."]
+position = Vector2( 210, 184 )
+scale = Vector2( 0.725694, 0.990741 )
+texture = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.0
+margin_top = -152.5
+margin_right = 136.0
+margin_bottom = 152.5
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -126.0
+margin_top = 6.0
+margin_right = 118.0
+margin_bottom = 287.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 10
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+margin_left = 15.0
+margin_top = 10.0
+margin_right = 229.0
+margin_bottom = 266.0
+
+[node name="label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer"]
+margin_right = 214.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 73 )
+text = "Opções"
+align = 1
+valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="TextureRect/MarginContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 214.0
+margin_bottom = 31.0
+
+[node name="Sair" type="Button" parent="."]
+margin_left = 97.0
+margin_top = 260.5
+margin_right = 311.0
+margin_bottom = 280.5
+custom_fonts/font = SubResource( 74 )
+text = "Menu"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -107.0
+margin_right = 30.0
+margin_bottom = -91.0
+custom_fonts/font = SubResource( 92 )
+text = "Mover"
+align = 1
+
+[node name="Correr" type="AnimatedSprite" parent="."]
+position = Vector2( 165, 91 )
+frames = SubResource( 81 )
+animation = "run"
+frame = 3
+playing = true
+
+[node name="HSeparator" type="HSeparator" parent="."]
+margin_left = 97.0
+margin_top = 113.0
+margin_right = 311.0
+margin_bottom = 117.0
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+margin_left = 97.0
+margin_top = 172.0
+margin_right = 311.0
+margin_bottom = 176.0
+
+[node name="arrowkeys" type="Sprite" parent="."]
+position = Vector2( 234, 93 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 9 )
+
+[node name="Pular" type="AnimatedSprite" parent="."]
+position = Vector2( 165, 145 )
+frames = SubResource( 90 )
+frame = 1
+playing = true
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -45.0
+margin_right = 30.0
+margin_bottom = -29.0
+rect_pivot_offset = Vector2( -288, 94 )
+custom_fonts/font = SubResource( 92 )
+text = "pular"
+align = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 235, 150 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -6.66666
+margin_top = -15.0
+margin_right = 9.33334
+margin_bottom = 9.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 94 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = 14.0
+margin_right = 57.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( -288, 94 )
+custom_fonts/font = SubResource( 92 )
+text = "Pegar Numero"
+align = 1
+
+[node name="Numero" type="Sprite" parent="."]
+modulate = Color( 0.933333, 0.415686, 0.360784, 1 )
+position = Vector2( 174, 223 )
+scale = Vector2( 0.47, 0.499206 )
+texture = ExtResource( 10 )
+
+[node name="Parado" type="AnimatedSprite" parent="."]
+position = Vector2( 163, 223 )
+frames = SubResource( 99 )
+frame = 2
+playing = true
+
+[node name="Parado2" type="Sprite" parent="."]
+position = Vector2( 235, 226 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Parado2"]
+margin_left = -6.66666
+margin_top = -15.0
+margin_right = 9.33334
+margin_bottom = 9.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 94 )
+text = "c"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="c" type="AnimatedSprite" parent="."]
+position = Vector2( 174, 199 )
+scale = Vector2( 0.221428, 0.21875 )
+frames = SubResource( 102 )
+frame = 1
+playing = true
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -30.439
+
+[connection signal="pressed" from="Sair" to="." method="_on_Sair_pressed"]

@@ -3,23 +3,23 @@
 [ext_resource path="res://Modules/Menus/MenuPausa/Pause.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Interface/PNG/level_select/bg.png" type="Texture" id=2]
 
-[sub_resource type="DynamicFontData" id=70]
+[sub_resource type="DynamicFontData" id=75]
 font_path = "res://Assets/Font/upheavtt.ttf"
 
 [sub_resource type="DynamicFont" id=73]
 size = 25
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 70 )
+font_data = SubResource( 75 )
 
-[sub_resource type="DynamicFontData" id=72]
+[sub_resource type="DynamicFontData" id=76]
 font_path = "res://Assets/Font/upheavtt.ttf"
 
 [sub_resource type="DynamicFont" id=74]
 size = 14
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 72 )
+font_data = SubResource( 76 )
 
 [node name="menuPausa" type="Control"]
 anchor_right = 1.0
