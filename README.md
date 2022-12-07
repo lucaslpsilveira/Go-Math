@@ -30,4 +30,4 @@ Para exportar o projeto para um executavel ou demais formatos, basta acessar o m
 * [Craftpix](https://craftpix.net/) - Aquisição dos Sprites
 
 ---
-⌨️ com por [Lucas P. Silveira](https://gitlab.com/lucaslpsilveira)
+⌨️ por [Lucas P. Silveira](https://gitlab.com/lucaslpsilveira)
