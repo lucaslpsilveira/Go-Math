@@ -2,10 +2,11 @@
 
 Trabalho desenvolvido como requisito parcial para obtenção do grau de Bacharel em Sistemas da Informação na Pontifícia Universidade Católica do Rio Grande do Sul, consistente em um jogo educacional de plataforma, com múltiplas fases, para auxílio e estímulo a aprendizagem de operações básicas de matemática pelos alunos das séries iniciais do ensino fundamental.
 
+O jogo está disponibilizado de forma gratuita online e pode ser acessado no seguinte endereço: https://gotm.io/lucaslpsilveira/gomath 
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
 ### 📋 Pré-requisitos
 
@@ -16,7 +17,7 @@ https://godotengine.org/
 
 ### 🔧 Configuração e execução
 
-Após aberto o projeto pela IDE da Godot, para executar o jogo basta pressionar a tecla F5 ou clicar no icone de de play localizado no topo a direita.
+Após aberto o projeto pela IDE da Godot, para executar o jogo basta pressionar a tecla F5 ou clicar no icone de play localizado no topo a direita.
 Desta forma você terá o jogo sendo executado em modo de desenvolvimento e quaisquer erros que venham acontecer irão paralisar a aplicação e exibir no console o erro em questão.
 
 ### ⚙️ Exportação
